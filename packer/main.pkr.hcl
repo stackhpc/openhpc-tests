@@ -39,7 +39,7 @@ source "qemu" "openhpc-compute" {
     ["-m", "896M"],
     ["-cdrom", "config-drive.iso"]
     ]
-  vm_name          = "ohpc-compute.qcow2" # image name
+  vm_name          = "ohpc-compute-${local.timestamp}.qcow2" # image name
   shutdown_command = "sudo shutdown -P now"
 }
 
